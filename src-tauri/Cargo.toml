@@ -1,0 +1,34 @@
+[package]
+name = "n1kk3"
+version = "0.1.0"
+edition = "2021"
+description = "A linux launcher for N1kk3"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "rlib", "staticlib"]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "n1kk3_lib"
+
+[dependencies]
+flate2 = "1.1.9"
+liblzma = "0.4.6"
+notify = "8.2.0"
+regex = "1.12.3"
+reqwest = { version = "0.13.2", features = ["stream"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10.9"
+tar = "0.4.44"
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+tokio = { version = "1.49.0", features = ["full"] }
+tracing = "0.1.44"
+zip = "8.1.0"
+zstd = "0.13.3"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
