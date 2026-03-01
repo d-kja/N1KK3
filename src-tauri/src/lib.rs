@@ -1,5 +1,6 @@
 pub mod config;
 pub mod download;
+pub mod setup;
 pub mod wine;
 
 use config::paths;

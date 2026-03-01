@@ -71,6 +71,8 @@ impl Wine {
         drive_path.exists()
     }
 
+    pub async fn setup() {}
+
     pub async fn create(&self, wine_binary: WineBinary) -> Result<(), WineError> {
         let root_path = &self.path;
 

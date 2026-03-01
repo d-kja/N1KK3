@@ -3,7 +3,9 @@ use std::path::PathBuf;
 
 use crate::{config::paths::Paths, download::client::WINE_RUNNER_SOURCE};
 
-pub const RUNNER_ARCHIVE: &str = "wine-cachyos-miniloader-fonts-10.0-1-x86_64.tar.xz";
+pub const RUNNER_ARCHIVE_RAW: &str = "wine-cachyos-miniloader-fonts-10.0-1-x86_64.tar.xz";
+pub const RUNNER_ARCHIVE_EXTRACTED: &str = "wine-cachyos-miniloader-10.0";
+
 pub const RUNNER_NAME: &str = "wine-cachyos";
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
